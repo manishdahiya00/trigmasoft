@@ -48,11 +48,12 @@ function About() {
                 Our Team : Passionate and Highly Skilled
               </p>
               <p className=" text-gray-400">
-                At the heart of Trigmasoft's success is its team of passionate
-                and highly skilled professionals. These experts are not just
-                employees but enthusiasts who genuinely love what they do. They
-                are dedicated to delivering the best solutions and services, and
-                this commitment shines through in every project they undertake.
+                At the heart of Trigmasoft&apos;s success is its team of
+                passionate and highly skilled professionals. These experts are
+                not just employees but enthusiasts who genuinely love what they
+                do. They are dedicated to delivering the best solutions and
+                services, and this commitment shines through in every project
+                they undertake.
               </p>
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
                 <li className="flex gap-x-3">
@@ -72,9 +73,9 @@ function About() {
                     <strong className="font-semibold text-white">
                       Client-Centric Approach.
                     </strong>
-                    We prioritize understanding our clients' unique needs and
-                    challenges. This client-centric approach allows us to tailor
-                    solutions that perfectly align with their goals and
+                    We prioritize understanding our clients&apos; unique needs
+                    and challenges. This client-centric approach allows us to
+                    tailor solutions that perfectly align with their goals and
                     objectives.
                   </span>
                 </li>
@@ -142,7 +143,7 @@ function About() {
                     <strong className="font-semibold text-white">
                       Proven Track Record.
                     </strong>
-                    Over the years, we've successfully completed numerous
+                    Over the years, we&apos;ve successfully completed numerous
                     projects across a wide range of industries. Our portfolio of
                     satisfied clients serves as a testament to our expertise.
                   </span>
@@ -188,7 +189,7 @@ function About() {
                       Passion for Excellence.
                     </strong>
                     At Trigmasoft, we believe in continuous improvement. Our
-                    team's passion for excellence drives us to consistently
+                    team&apos;s passion for excellence drives us to consistently
                     deliver outstanding result
                   </span>
                 </li>

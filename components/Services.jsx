@@ -15,8 +15,8 @@ function Services() {
                 Discover Our Offerings
               </h2>
               <p className="text-white text-base dark:text-dark-6">
-                At Trigmasoft, we're dedicated to delivering a wide array of
-                high-impact services designed to meet your unique needs. Our
+                At Trigmasoft, we&apos;re dedicated to delivering a wide array
+                of high-impact services designed to meet your unique needs. Our
                 commitment is unwavering, and our solutions are tailored to
                 perfection.
               </p>
