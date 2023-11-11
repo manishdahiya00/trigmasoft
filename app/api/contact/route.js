@@ -22,9 +22,9 @@ export async function POST(request) {
     to: process.env.EMAIL,
     subject: subject,
     html: `
-        <h3>Hello Manish mail from ${email}</h3>
-        <p>message: ${message}</p>
-    `,
+         <h3>Hello Manish mail from ${email}</h3>
+         <p>message: ${message}</p>
+     `,
   };
 
   await transporter.sendMail(mail);

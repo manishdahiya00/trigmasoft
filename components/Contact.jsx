@@ -6,17 +6,17 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const submitForm = (e) => {
+  async function submitForm(e) {
     e.preventDefault();
     let data = {
       name,
       email,
       message,
     };
-    fetch("/api/contact", {
+    await fetch("trigmasoft-0.web.app/api/contact", {
       method: "POST",
       headers: {
-        Accept: "application/json, text/plain, */*",
+        Accept: "application/json",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
@@ -25,7 +25,7 @@ function Contact() {
     setName("");
     setEmail("");
     setMessage("");
-  };
+  }
 
   return (
     <section className="bg-white dark:bg-gray-900" id="contact">
