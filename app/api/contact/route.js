@@ -1,10 +1,10 @@
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
+import { NextResponse } from "next/server";
 dotenv.config();
 
 export async function POST(request) {
-  const { name, email, message } = await request.json();
-
+  const data = await request.json();
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
@@ -15,22 +15,20 @@ export async function POST(request) {
     },
   });
 
-  const subject = "Mail from " + name;
+  const subject = "Mail from " + data.name;
 
   const mail = {
-    from: email,
+    from: data.email,
     to: process.env.EMAIL,
     subject: subject,
     html: `
-         <h3>Hello Manish mail from ${email}</h3>
-         <p>message: ${message}</p>
+         <h3>Hello Manish mail from ${data.email}</h3>
+         <p>message: ${data.message}</p>
      `,
   };
 
   await transporter.sendMail(mail);
 
-  return new Response(JSON.stringify({ message: "Email Sent Successfully" }), {
-    status: 200,
-    headers: { "Content-Type": "application/json" },
-  });
+  return NextResponse.json({ response: data });
 }
+export const dynamic = "force-static";

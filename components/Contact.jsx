@@ -13,7 +13,7 @@ function Contact() {
       email,
       message,
     };
-    await fetch("trigmasoft-0.web.app/api/contact", {
+    await fetch("/api/contact", {
       method: "POST",
       headers: {
         Accept: "application/json",
