@@ -16,7 +16,6 @@ function Contact() {
     await fetch("/api/contact", {
       method: "POST",
       headers: {
-        accept: application / json,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
