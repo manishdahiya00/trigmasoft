@@ -39,5 +39,3 @@ export async function POST(request) {
   }
 }
 
-// This route needs to be dynamic for POST requests
-export const dynamic = "force-dynamic";
