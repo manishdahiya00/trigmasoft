@@ -8,22 +8,31 @@ function Contact() {
 
   async function submitForm(e) {
     e.preventDefault();
-    let data = {
+    const data = {
       name,
       email,
       message,
     };
-    await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-    alert("Message sent successfully!!");
-    setName("");
-    setEmail("");
-    setMessage("");
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      if (response.ok) {
+        alert("Message sent successfully!!");
+        setName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("An error occurred. Please try again.");
+    }
   }
 
   return (

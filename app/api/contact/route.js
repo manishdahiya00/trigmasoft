@@ -27,8 +27,17 @@ export async function POST(request) {
      `,
   };
 
-  await transporter.sendMail(mail);
-
-  return NextResponse.json({ response: data });
+  try {
+    await transporter.sendMail(mail);
+    return NextResponse.json({ success: true, message: "Email sent successfully" });
+  } catch (error) {
+    console.error("Error sending email:", error);
+    return NextResponse.json(
+      { success: false, error: "Failed to send email" },
+      { status: 500 }
+    );
+  }
 }
-export const dynamic = "force-static";
+
+// This route needs to be dynamic for POST requests
+export const dynamic = "force-dynamic";

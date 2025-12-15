@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import Head from "next/head";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,10 +10,15 @@ export const metadata = {
     "Trigmasoft Private Limited, Digital Marketing, IoT(VAS), Ad-Tech, Gaming, IT Solutions",
   description:
     "Trigmasoft Private Limited is a full-service based Web Agency We help in Strengthening Businesses.",
-  author: "Trigmasoft Private Limited",
-  keywords:
-    "Trigmasoft Private Limited,Digital Marketing,IoT(VAS),Ad-Tech, Gaming,IT Solutions",
-  favicon: "/favicon.ico",
+  authors: [{ name: "Trigmasoft Private Limited" }],
+  keywords: [
+    "Trigmasoft Private Limited",
+    "Digital Marketing",
+    "IoT(VAS)",
+    "Ad-Tech",
+    "Gaming",
+    "IT Solutions",
+  ],
 };
 
 export default function RootLayout({ children }) {
@@ -22,12 +27,13 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Navbar />
         {children}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9135106114306396"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </body>
-      <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9135106114306396"
-        crossOrigin="anonymous"
-      ></script>
     </html>
   );
 }
